@@ -1,0 +1,32 @@
+RFR_surrogate.py:
+Starting GridSearch...
+GridSearch Completed in 22.024245699999938 seconds.
+
+Best Hyperparameters: {'max_depth': None, 'max_features': 1.0, 'min_samples_split': 2, 'n_estimators': 200}
+Cross-Validation Score (RMSE): 779.7 pcm
+
+Model saved as pickle file: 'rfr_k_eff_surrogate.pkl'
+Saved Feature Importance Chart
+
+XGB_surrogate.py:
+Starting GridSearch...
+GridSearch Completed in 29.280763300000217 seconds.
+
+Best Hyperparameters: {'learning_rate': 0.03, 'max_depth': 3, 'n_estimators': 2000, 'subsample': 0.5}
+Cross-Validation Score (RMSE): 336.8 pcm
+
+Model saved as pickle file: 'xgb_k_eff_surrogate.pkl'
+Saved Feature Importance Chart
+
+Surrogate_model_test.py:
+Loading Surrogate Models
+Models loaded successfully
+Running Random Forest predictions
+Running XGBoost predictions
+
+RFR Total Time: 0.017071 s, Per Sample: 0.00008535 s
+XGB Total Time: 0.005226 s, Per Sample: 0.00002613 s
+
+predictions and errors for both models saved to 'Comparison_dataset.csv'
+Generating Parity Plot...
+Saved Parity_plot.png

@@ -1,0 +1,19 @@
+RFR and XGBoost Surrogate Models - User Guide C
+C.1 Prerequisites 
+Make sure the following components are accessible within VS Code before execution:
+•	The ‘/RFR’ and ‘/XGB’ folders (containing the model training scripts)
+•	‘Surrogate_model_test.py’ (the comparison script running against unseen data)
+•	‘dataset_cleaned.csv’ (cleaned unseen training dataset)
+•	‘Comparison_dataset.csv’ (output dataset with the results for all 3 models on an unseen dataset)
+
+B.2 Environment Configuration 
+In the VS code terminal (ensure python is installed), navigate to the target folder and install the required packages via pip:
+‘cd 3. Surrogate Models’ or ‘cd 3. Surrogate Models/RFR’ or ‘cd 3. Surrogate Models/XGB’
+‘pip install numpy pandas scikit-learn XGBoost matplotlib joblib’
+
+B.3 Execution 
+Once the environment is configurated in the relevant directory, the surrogate model training scripts can be run from the terminal one at a time:
+‘python RFR_surrogate.py’ 
+‘python XGB_surrogate’
+These scripts output ‘.pk1’ files that are used by the model testing script. Once present, ‘Surrogate_model_test.py’ can be executed, outputting an updated dataset (‘Comparison_dataset.csv’) as well as ‘Parity_plot.png’ matplotlib visualisation:
+‘python Surrogate_model_test.py’

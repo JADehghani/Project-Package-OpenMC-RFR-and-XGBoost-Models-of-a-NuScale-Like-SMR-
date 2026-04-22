@@ -1,0 +1,31 @@
+# ------- Section 1 --------
+
+Loaded 1000 samples
+1000 / 1000 valid runs
+Total Compute Time:   60468.14 seconds
+Average Compute Time: 60.47 seconds per run
+
+# ------- Section 2 --------
+
+Saved 1000 samples to dataset_cleaned.csv
+
+Dataset summary:
+       Fuel_Temperature_K  Cladding_Temperature_K  Moderator_Temperature_K  \
+count           1000.0000               1000.0000                1000.0000   
+mean             849.9941                599.9987                 550.0014   
+std              202.1753                 57.7620                  28.8814   
+min              500.5034                500.1763                 500.0020   
+25%              675.4590                550.0014                 525.0122   
+50%              849.9915                599.9852                 549.9970   
+75%             1024.9133                649.9925                 574.9430   
+max             1199.6102                699.8308                 599.9547   
+
+       Boron_ppm    CR_Step      K_eff  
+count  1000.0000  1000.0000  1000.0000  
+mean    617.5061   123.9920     1.0300  
+std     356.6888    71.6312     0.0714  
+min       0.7757     0.0000     0.8596  
+25%     308.9787    62.0000     0.9841  
+50%     618.0552   124.0000     1.0278  
+75%     925.6876   186.0000     1.0803  
+max    1233.9268   248.0000     1.1849  

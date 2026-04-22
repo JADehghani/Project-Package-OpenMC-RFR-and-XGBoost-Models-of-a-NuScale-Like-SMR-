@@ -1,0 +1,29 @@
+Ground-truth Dataset Generation - User Guide A
+A.1 Prerequisites 
+Prior to execution, ensure that the following components are present on a POSIX system (with access to linux terminal):
+•	In the project folder (OpenMC):
+•	The overarching pipeline script (generate_dataset.py)
+•	The geometry generation script (build-core-frsh-v2.py)
+•	The core builder scripts (/smr folder)
+•	The ENDF/B-VII.1 cross-section library (endfb71_hdf5 folder)
+
+A.2 Environment Configuration 
+To prevent dependency conflicts, the pipeline is executed within a Conda virtual environment. Navigate to the project folder and initialise the environment:
+‘cd ~/Desktop/OpenMC 
+conda create -n NuScale -c conda-forge python openmc pandas scipy numpy h5py 
+conda activate NuScale 
+pip install tqdm iapws’
+
+A.3 No Hang-Up Execution & Monitoring
+Because Monte Carlo methods require extensive runtime (this project targets 60 seconds per sample), the python script is executed as a background process (‘nohup’). This prevents the run from terminating if the terminal closes. All outputs are redirected to a log file:
+‘nohup python -u generate.py > run_log.txt 2>&1 &
+tail -f run_log.txt’
+(Press Ctrl-C to step back to the terminal from ‘run_log.txt’)
+
+A.4 Termination
+To interrupt the pipeline mid-process, a SIGINT signal must be sent to python script via its process ID; read from the list of running processes:
+‘pgrep -af python
+kill -SIGINT <process_id>’
+Once dataset.csv is saved (in the project folder), deactivate and delete the virtual environment:
+‘conda deactivate 
+conda remove -n NuScale –all’

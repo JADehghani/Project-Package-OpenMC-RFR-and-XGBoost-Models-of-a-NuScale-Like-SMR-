@@ -1,0 +1,11 @@
+Data Cleaning Pipeline - User Guide B
+B.1 Prerequisites 
+Ensure the following files are present in the same directory and jupyter is installed within the python kernal via VS code:
+•	The dataset cleaner jupyter notebook (Raw_data_cleaner.ipynb)
+•	The raw dataset output from generate_dataset.py (dataset.csv)
+
+B.2 Execution 
+Select the appropriate python kernal and run the two-sequence pipeline chronologically:
+•	Sequence 1: Loads the raw dataset, drops null values and outputs compute times.
+•	Sequence 2: Removes non-feature parameters, saves the clean dataset to dataset_cleaned.csv in the base directory.
+•	Sequence 3: Creates the visual correalation heatmap and dual verification plots and saves them to '/Cleaned Dataset Plots'.
