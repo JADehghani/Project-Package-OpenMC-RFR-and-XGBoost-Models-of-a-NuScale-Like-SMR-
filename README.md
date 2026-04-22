@@ -1,4 +1,4 @@
-# Project-Package-OpenMC-RFR-and-XGBoost-Models-of-a-NuScale-Like-SMR-
+# Project-Package-OpenMC-RFR-and-XGBoost-Models-of-a-NuScale-Like-SMR
 
 ## Overview
 This repository contains the 3 stage computational pipeline developed to train, validate, and execute tree-based ML surrogate models (Random Forest and XGBoost) for predicting the effective multiplication factor (k_eff) of a Small Modular Reactor (SMR). The project successfully captures the complex underlying reactor physics while achieving microsecond prediction times, offering a resolution to the computational bottlenecks of traditional Monte Carlo simulations.
